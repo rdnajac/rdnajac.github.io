@@ -9,7 +9,7 @@
 // Override default colors and font
 body {
   background-color: #16161d;
-  color: #39ff14;
+  color: #14afff;
   font-family: 'JetBrains Mono', monospace;
 }
 
@@ -24,6 +24,13 @@ header, section, footer {
 h1, h2, h3, h4, h5, h6 {
   color: #39ff14;
   font-family: 'JetBrains Mono', monospace;
+}
+
+a {
+  color: #39ff14;
+  &:hover, &:focus {
+    color: #00ff00;
+  }
 }
 
 code {
