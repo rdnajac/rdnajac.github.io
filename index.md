@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Your Page Title
+title: Ryan Najac
 ---
 
-# Welcome to My GitHub Pages Site
+# Hello, world!
 
-This is the content of my index.md file...
+Check out my links below:
+- [GitHub](https://github.com/rdnajac)
+- [LinkedIn](https://www.linkedin.com/in/ryan-najac/)
