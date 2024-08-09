@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Ryan D. Najac
-description: My links
 ---
 
 # Hello, world!
