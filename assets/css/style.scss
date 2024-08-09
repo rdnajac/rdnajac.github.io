@@ -1,0 +1,46 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// Import JetBrains Mono font
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+// Override default colors and font
+body {
+  background-color: #16161d;
+  color: #39ff14;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.wrapper {
+  background-color: #16161d;
+}
+
+header, section, footer {
+  border-color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #39ff14;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+a {
+  color: #39ff14;
+  &:hover, &:focus {
+    color: #00ff00;
+  }
+}
+
+code {
+  background-color: #1a1a1a;
+  color: #39ff14;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+// Ensure all text uses JetBrains Mono
+p, ul, ol, table, pre, dl {
+  font-family: 'JetBrains Mono', monospace;
+}
+
