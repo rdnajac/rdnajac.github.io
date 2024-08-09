@@ -22,12 +22,13 @@ header, section, footer {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #39ff14;
+  color: #14afff;
   font-family: 'JetBrains Mono', monospace;
 }
 
 a {
   color: #39ff14;
+  text-decoration: underline;  // Add this line to underline links
   &:hover, &:focus {
     color: #00ff00;
   }
