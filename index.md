@@ -2,8 +2,7 @@
 layout: default
 ---
 
-# [GitHub](https://github.com/rdnajac)
+# Hello, world!
+## Vist [LinkedIn](https://www.linkedin.com/in/ryan-najac/)
+## Download my [Resume](/assets/. ./assets/rdnajac_resume.pdf)
 
-> This is a quote 
-
-# [LinkedIn](https://www.linkedin.com/in/ryan-najac/)

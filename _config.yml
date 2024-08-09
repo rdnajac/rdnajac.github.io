@@ -1,6 +1,5 @@
-title: "Ryan Najac"
-description: "Hello, world!"
+title: Ryan D. Najac
 remote_theme: pages-themes/minimal@v0.2.0
-logo: assets/me.jpg
+logo: /assets/me.jpg
 plugins:
 - jekyll-remote-theme
