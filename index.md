@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Ryan D. Najac
 ---
 
 # [GitHub](https://github.com/rdnajac)
