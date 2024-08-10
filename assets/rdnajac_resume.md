@@ -1,3 +1,6 @@
+# rdnajac_resume.tex
+
+```latex
 \documentclass[11pt,a4paper]{article}   % set font size and paper size
 \usepackage[utf8]{inputenc}		% set input encoding to utf8 (same as vim)
 \usepackage[T1]{fontenc}		% enable boldface and single-char diacritics
@@ -101,3 +104,4 @@ Bachelor of Arts, Computer Science \hfill May 2024
 \end{itemize}
 
 \end{document}
+```
