@@ -7,8 +7,7 @@ layout: default
 ## Explore my [wiki](https://github.com/rdnajac/cbmf/wiki)
 ## Download my [resume](./assets/rdnajac_resume.pdf)
 
-<details>
-<summary>Click to browse the source code:</summary>
+<details><h3><summary>Click to browse the source code:</summary></h3>
 
 ```c
 main()
