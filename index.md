@@ -12,7 +12,7 @@ layout: default
 
 <details><summary>Click to expand</summary>
 
-Read the [source code](./assets/rdnajac_resume.pdf)
+Browse the [source code](./assets/rdnajac_resume.tex)
 
 </details>
 
