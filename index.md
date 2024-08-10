@@ -6,9 +6,10 @@ layout: default
 ## Visit my [LinkedIn](https://www.linkedin.com/in/ryan-najac/)
 ## Explore my [wiki](https://github.com/rdnajac/cbmf/wiki)
 ## Download my [resume](./assets/rdnajac_resume.pdf)
+<details>
+  <summary>Browse the source code!</summary>
 
-```tex
-
+```latex
 \documentclass[11pt,a4paper]{article}   % set font size and paper size
 \usepackage[utf8]{inputenc}	            % set input encoding to utf8 (same as vim)
 \usepackage[T1]{fontenc}	            % enable boldface and single-char diacritics
@@ -113,3 +114,4 @@ Bachelor of Arts, Computer Science \hfill May 2024
 \end{document}
 ```
 
+</details>
