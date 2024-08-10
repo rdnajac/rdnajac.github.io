@@ -10,9 +10,4 @@ layout: default
 
 ## Download my [resume](./assets/rdnajac_resume.pdf)
 
-<details><summary>Click to expand</summary>
-
-Browse the [source code](./assets/rdnajac_resume.md)
-
-</details>
-
+Browse the [source code](assets/rdnajac_resume.md)
