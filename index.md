@@ -6,8 +6,6 @@ layout: default
 ## Visit my [LinkedIn](https://www.linkedin.com/in/ryan-najac/)
 ## Explore my [wiki](https://github.com/rdnajac/cbmf/wiki)
 ## Download my [resume](./assets/rdnajac_resume.pdf)
-<details>
-  <summary>Browse the source code!</summary>
 
 ```tex
 
@@ -115,4 +113,3 @@ Bachelor of Arts, Computer Science \hfill May 2024
 \end{document}
 ```
 
-</details>
