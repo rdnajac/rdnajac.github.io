@@ -9,5 +9,12 @@ layout: default
 
 Browse the source code:
 
-<script src="https://gist.github.com/rdnajac/d2c1629f16e9e070168bb42d99c2332c.js"></script>
+```c
+main()
+{
+    printf("hello, world\n");
+}
+```
+
+<!-- <script src="https://gist.github.com/rdnajac/d2c1629f16e9e070168bb42d99c2332c.js"></script> -->
 
