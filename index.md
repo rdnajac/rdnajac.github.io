@@ -9,7 +9,8 @@ layout: default
 <details>
   <summary>Browse the source code!</summary>
 
-```latex
+```tex
+
 \documentclass[11pt,a4paper]{article}   % set font size and paper size
 \usepackage[utf8]{inputenc}	            % set input encoding to utf8 (same as vim)
 \usepackage[T1]{fontenc}	            % enable boldface and single-char diacritics
