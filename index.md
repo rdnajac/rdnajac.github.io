@@ -7,7 +7,8 @@ layout: default
 ## Explore my [wiki](https://github.com/rdnajac/cbmf/wiki)
 ## Download my [resume](./assets/rdnajac_resume.pdf)
 
-Browse the source code:
+<details>
+<summary>Click to browse the source code:</summary>
 
 ```c
 main()
@@ -16,5 +17,6 @@ main()
 }
 ```
 
-<!-- <script src="https://gist.github.com/rdnajac/d2c1629f16e9e070168bb42d99c2332c.js"></script> -->
+</details>
+
 
