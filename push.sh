@@ -4,10 +4,10 @@
 
 git status
 git add .
-
+echo "All changes added to the repository."
+git status
 echo "Enter your commit message:"
 read commit_message
-
 git commit -m "$commit_message"
 git push
 

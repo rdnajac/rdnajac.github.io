@@ -1,3 +1,7 @@
+<style>
+code { font-size: 12px; }
+</style>
+
 # LaTeX Source
 
 [Download PDF](../assets/rdnajac-resume.pdf)
