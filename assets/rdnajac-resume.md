@@ -1,4 +1,4 @@
-# rdnajac_resume.tex
+# LaTeX Source
 
 ```latex
 \documentclass[11pt,a4paper]{article}   % set font size and paper size
