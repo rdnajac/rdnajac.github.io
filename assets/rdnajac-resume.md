@@ -2,7 +2,7 @@
 code { font-size: 12px; }
 </style>
 
-# LaTeX Source
+# LaTeX Source <link href="./css/syntax.css" rel="stylesheet" >
 
 [Download PDF](../assets/rdnajac-resume.pdf)
 
