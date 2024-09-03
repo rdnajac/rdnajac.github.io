@@ -23,7 +23,8 @@ markdown: $(DOC).md
 
 $(DOC).md:
 	@echo "# LaTeX Source" > $@
-	# newline
+	@echo >> $@
+	@echo "[Download PDF](../assets/$(DOC).pdf)" >> $@
 	@echo >> $@
 	@echo '```latex' >> $@
 	@cat $(DOC).tex >> $@

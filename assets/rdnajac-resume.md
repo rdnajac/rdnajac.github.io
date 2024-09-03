@@ -1,5 +1,7 @@
 # LaTeX Source
 
+[Download PDF](../assets/rdnajac-resume.pdf)
+
 ```latex
 \documentclass[11pt,a4paper]{article}   % set font size and paper size
 \usepackage[utf8]{inputenc}		% set input encoding to utf8 (same as vim)
