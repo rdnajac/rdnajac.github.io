@@ -22,13 +22,14 @@ $(DOC).pdf: $(DOC).tex
 markdown: $(DOC).md
 
 $(DOC).md:
-	@echo "# LaTeX Source" > $@
-	@echo >> $@
-	@echo "[Download PDF](../assets/$(DOC).pdf)" >> $@
-	@echo >> $@
-	@echo '```latex' >> $@
-	@cat $(DOC).tex >> $@
-	@echo '```' >> $@
+	@printf "<style>\n\
+	code { font-size: 12px; }\n\
+	</style>\n\n" > $@
+	@printf "# LaTeX Source\n\n" >> $@
+	@printf "[Download PDF](../assets/$(DOC).pdf)\n\n" >> $@
+	@printf "```latex\n" >> $@
+	@cat $(TEX_SRC) >> $@
+	@printf "```\n" >> $@
 
 # Install files to assets folder and Desktop
 install: $(DOC).pdf $(DOC).md
