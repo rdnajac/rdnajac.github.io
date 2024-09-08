@@ -1,0 +1,11 @@
+site_name: Ryan D. Najac
+site_url: https://rdnajac.tech
+site_description: "Welcome to my personal website!"
+site_author: Ryan D. Najac
+copyright: Copyright &copy; 2024 <a href="https://rdnajac.tech">Ryan D. Najac</a>
+
+theme:
+  name: material
+
+# markdown_extensions:
+#   - markdown_gfm_admonition

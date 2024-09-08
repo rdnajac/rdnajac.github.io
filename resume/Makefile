@@ -32,8 +32,8 @@ $(DOC).md: $(DOC).tex
 
 # Install files to assets folder and Desktop
 install: $(DOC).pdf $(DOC).md
-	cp -fv $(DOC).pdf ../assets/
-	cp -fv $(DOC).md ../assets/
+	cp -fv $(DOC).pdf ../docs/assets/
+	cp -fv $(DOC).md ../docs/assets/
 	cp -fv $(DOC).pdf ~/Desktop/
 
 # Clean up auxiliary files (alphabetized and using specific file names)
