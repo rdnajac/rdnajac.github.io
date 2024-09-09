@@ -1,47 +1,232 @@
 ---
 ---
-@import "{{ site.theme }}";
-// Import JetBrains Mono font
+// Import fonts
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
-// Override default colors and font
+// Variables
+$font-family: 'JetBrains Mono', monospace;
+$bg-color: #16161d;
+$text-color: #14afff;
+$link-color: #39ff14;
+$link-hover-color: #00ff00;
+$inline-code-bg: #1a1a1a;
+$border-color: #e5e5e5;
+$header-width: 33%;
+$content-width: 860px;
+$link-bg: #f4f4f4;
+$link-border: #e0e0e0;
+$icon-color: #676767;
+$icon-hover-color: #14afff;
+
+// Base styles
 body {
-  background-color: #16161d;
-  color: #14afff;
-  font-family: 'JetBrains Mono', monospace;
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
 }
-.wrapper {
-  background-color: #16161d;
-}
-header, section, footer {
-  border-color: #333333;
-}
+
+// Typography
 h1, h2, h3, h4, h5, h6 {
-  color: #14afff;
-  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  margin: 0 0 20px;
+  line-height: 1.1;
 }
+
+p, ul, ol, pre, dl {
+  margin: 0 0 20px;
+}
+
+// Links
 a {
-  color: #39ff14;
+  color: $link-color;
   text-decoration: underline;
   &:hover, &:focus {
-    color: #00ff00;
+    color: $link-hover-color;
+    font-weight: bold;
   }
 }
-// Ensure all text uses JetBrains Mono, except within pre and code tags
-p, ul, ol, table, dl {
-  font-family: 'JetBrains Mono', monospace;
+
+// Layout
+.wrapper {
+  display: flex;
+  flex: 1;
+  max-width: 100%;
 }
 
-// Style for inline code, but not codeblocks
-:not(pre) > code {
-  background-color: #1a1a1a;
-  color: #39ff14;
-  font-family: 'JetBrains Mono', monospace;
+// Header styles
+header {
+  width: $header-width;
+  max-width: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+
+  img {
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
 }
 
-// Reset styles for codeblocks
-pre, pre code {
-  font-family: inherit;
-  background-color: inherit;
-  color: inherit;
+// Social links
+.links {
+  list-style: none;
+  padding: 0;
+  background: $link-bg;
+  border-radius: 5px;
+  border: 1px solid $link-border;
+  width: 100%;
+  max-width: 180px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  
+  li {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid $link-border;
+    
+    &:last-child {
+      border-right: none;
+    }
+  }
+  
+  a {
+    display: block;
+    padding: 10px 0;
+    color: $icon-color;
+    transition: all 0.3s ease;
+    
+    &:hover, &:focus {
+      color: $icon-hover-color;
+      background-color: darken($link-bg, 5%);
+    }
+    
+    i {
+      font-size: 20px;
+    }
+  }
+
+  li:first-child a {
+    border-radius: 5px 0 0 5px;
+  }
+
+  li:last-child a {
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+// Main content area
+section {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+// Footer
+footer {
+  width: $header-width;
+  max-width: 300px;
+  padding: 20px;
+  position: fixed;
+  bottom: 50px;
+  box-sizing: border-box;
+}
+
+// Additional elements
+code, pre {
+  font-family: $font-family;
+  color: #333;
+}
+
+pre {
+  padding: 8px 15px;
+  background: #f8f8f8;
+  border-radius: 5px;
+  border: 1px solid $border-color;
+  overflow-x: auto;
+}
+
+hr {
+  border: 0;
+  background: $border-color;
+  height: 1px;
+  margin: 0 0 20px;
+}
+
+// Media Queries
+@media screen and (max-width: 960px) {
+  body, .wrapper {
+    flex-direction: column;
+  }
+
+  header, section, footer {
+    width: 100%;
+    max-width: none;
+    position: static;
+  }
+
+  header {
+    height: auto;
+    padding: 20px;
+  }
+
+  section {
+    border: 1px solid $border-color;
+    border-width: 1px 0;
+    padding: 20px;
+    margin: 0 0 20px;
+  }
+
+  footer {
+    position: static;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    word-wrap: break-word;
+  }
+
+  pre, code {
+    word-wrap: normal;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  .links {
+    width: 99%;
+  }
+
+  .links li, .links li + li + li {
+    width: 33%;
+  }
+}
+
+@media print {
+  body {
+    padding: 0.4in;
+    font-size: 12pt;
+    color: #444;
+  }
 }
