@@ -1,6 +1,7 @@
 $font-family: 'JetBrains Mono', monospace;
 $bg-color: #16161d;
 $text-color: #14afff;
+$header-color: #ff6414;
 $link-color: #39ff14;
 $link-hover-color: #00ff00;
 $link-bg: #f4f4f4;
@@ -75,7 +76,15 @@ footer {
 
 h1 {
   font-size: 24px;
+  color: $header-color;
+
 }
+
+h2, h3 {
+  font-size: 18px;
+  color: $header-color;
+}
+
 
 a {
   color: $link-color;
@@ -88,20 +97,9 @@ a {
   }
 }
 
-.button {
-  display: inline-block;
-  padding: 8px 16px;
-  font-size: 14px;
-  border: none;
-  border-radius: 4px;
-  background-color: $link-bg;
-  color: $link-color;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-
-  &:hover, &:focus {
-    background-color: darken($link-bg, 5%);
-    color: $link-hover-color;
-  }
+hr {
+  border:0;
+  background:#e5e5e5;
+  height:1px;
+  margin:0 0 20px;
 }
