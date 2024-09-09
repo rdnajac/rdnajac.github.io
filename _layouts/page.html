@@ -4,33 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-{% seo %}
+    {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | relative_url }}">
   </head>
 
   <body>
-    <div class="wrapper">
+
       <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
         <img src="{{ site.profile | relative_url }}" alt="Profile" />
+        <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
         <ul class="links">
           <li><a href="https://www.linkedin.com/in/ryan-najac/"><i class="fa-brands fa-linkedin"></i></a></li>
           <li><a href="https://github.com/rdnajac"><i class="fa-brands fa-github"></i></a></li>
           <li><a href="https://orcid.org/0009-0000-6280-5646"><i class="fa-brands fa-orcid"></i></a></li>
         </ul>
       </header>
+
+    <div class="wrapper">
       <section>
-
       {{ content }}
-
       </section>
+
       <footer>
-	<p> Copyright &copy; <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+	<p>Copyright &copy; 2024 <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
       </footer>
+
     </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
   </body>
 </html>
+<!-- vim: ft=html -->

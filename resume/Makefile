@@ -22,7 +22,7 @@ $(DOC).md: $(DOC).tex
 	@echo 'code { font-size: 12px; }' >> $@
 	@echo '</style>' >> $@
 	@echo >> $@
-	@echo '# LaTeX Source <link href="./css/syntax.css" rel="stylesheet" >' >> $@
+	@echo '# LaTeX Source <link href="css/syntax.css" rel="stylesheet" >' >> $@
 	@echo >> $@
 	@echo '[Download PDF](../assets/$(DOC).pdf)' >> $@
 	@echo >> $@

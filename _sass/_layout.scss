@@ -1,0 +1,61 @@
+@media (max-width: 960px) {
+  header {
+    width: 100%;
+    height: auto;
+    position: static;
+    padding: 20px;
+  }
+
+  header img {
+    max-width: 150px;
+  }
+
+  .wrapper {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  section {
+    max-width: 100%;
+  }
+
+  footer {
+    width: 100%;
+    position: static;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  .wrapper {
+    padding: 10px;
+  }
+
+  header img {
+    max-width: 100px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .button {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+}
