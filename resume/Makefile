@@ -10,35 +10,19 @@ LATEXMK = latexmk
 FLAGS = -pdf -silent
 
 # Default target to build the PDF and generate Markdown
-all: $(DOC).pdf $(DOC).md
+all: $(DOC).pdf 
 
 # Rule to build the PDF using latexmk
 $(DOC).pdf: $(DOC).tex
 	$(LATEXMK) $(FLAGS) $(DOC).tex
 
-# Generate Markdown file with LaTeX code
-$(DOC).md: $(DOC).tex
-	@echo '<style>' > $@
-	@echo 'code { font-size: 12px; }' >> $@
-	@echo '</style>' >> $@
-	@echo >> $@
-	@echo '# LaTeX Source <link href="css/syntax.css" rel="stylesheet" >' >> $@
-	@echo >> $@
-	@echo '[Download PDF](../assets/$(DOC).pdf)' >> $@
-	@echo >> $@
-	@echo '```latex' >> $@
-	@cat $(DOC).tex >> $@
-	@echo '```' >> $@
-
 # Install files to assets folder and Desktop
 install: $(DOC).pdf $(DOC).md
 	cp -fv $(DOC).pdf ../assets/
-	cp -fv $(DOC).md ../assets/
 	cp -fv $(DOC).pdf ~/Desktop/
 
 # Clean up auxiliary files (alphabetized and using specific file names)
 clean:
-	rm -fv ./$(DOC).aux ./$(DOC).fdb_latexmk ./$(DOC).fls ./$(DOC).log \
-		./$(DOC).out ./$(DOC).synctex.gz ./$(DOC).pdf ./$(DOC).md
-
+	rm -fv ./$(DOC).aux ./$(DOC).fdb_latexmk ./$(DOC).fls \
+		./$(DOC).log ./$(DOC).out ./$(DOC).synctex.gz ./$(DOC).pdf 
 .PHONY: all install clean

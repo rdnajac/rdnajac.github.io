@@ -3,6 +3,12 @@ description: "Welcome to my personal website!"
 profile: assets/rdnajac-profile.jpg
 favicon: assets/favicon.ico
 tagline: "Researcher and programmer at the <a href='https://www.palomerolab.org/'>Palomero Lab</a>"
-
+copyright: "Copyright &copy; 2024 <a href='https://github.com/rdnajac/rdnajac.github.io'>rdnajac</a>"
 plugins:
   - jekyll-seo-tag
+  - jekyll-include-cache
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
