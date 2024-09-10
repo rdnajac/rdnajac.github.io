@@ -1,38 +1,57 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<!doctype html>
+<html lang="{{ site.lang | default: 'en-US' }}">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     {% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | relative_url }}">
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/style.css' | relative_url }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{{ site.favicon | relative_url }}"
+    />
   </head>
 
   <body>
-
-      <header>
-        <img src="{{ site.profile | relative_url }}" alt="Profile" />
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
-	<p>{{ site.tagline }}</p>
-        <ul class="links">
-          <li><a href="https://www.linkedin.com/in/ryan-najac/"><i class="fa-brands fa-linkedin"></i></a></li>
-          <li><a href="https://github.com/rdnajac"><i class="fa-brands fa-github"></i></a></li>
-          <li><a href="https://orcid.org/0009-0000-6280-5646"><i class="fa-brands fa-orcid"></i></a></li>
-        </ul>
-      </header>
-      <hr />
+    <header>{% include header.html %}</header>
+    <hr />
 
     <div class="wrapper">
       <section>
-      {{ content }}
+        {{ content }}
+        <details>
+          <summary>
+            <h2>
+              Download my
+              <a href="{{ '/assets/rdnajac-resume.pdf' | relative_url }}"
+                >resume</a
+              >
+            </h2>
+          </summary>
+
+          ...or browse its
+          <a href="{{ '/assets/rdnajac-resume.md' | relative_url }}"
+            >source code</a
+          >!
+        </details>
       </section>
 
       <footer>
-	<p>Copyright &copy; 2024 <a href="{{ site.github.repository_url }}">{{ site.github.owner_name }}</a></p>
+        <p>
+          Copyright &copy; 2024
+          <a href="{{ site.github.repository_url }}"
+            >{{ site.github.owner_name }}</a
+          >
+        </p>
       </footer>
-
     </div>
   </body>
 </html>
