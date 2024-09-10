@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "fmt": "prettier --write --plugin=@shopify/prettier-plugin-liquid '_includes/*.html' _layouts/*.html _sass/*.scss index.md"
+  }
+}
