@@ -1,0 +1,18 @@
+{% raw %}
+<h2>LaTeX Source</h2>
+<p>
+  <a href="{{ '/assets/rdnajac-resume.pdf' | relative_url }}" download
+    >📄 Download .pdf</a
+  >
+  <a
+    href="https://raw.githubusercontent.com/rdnajac/rdnajac.github.io/main/resume/rdnajac-resume.tex"
+    download
+    >🛠️ Download .tex</a
+  >
+</p>
+<div id="latex-content">
+  {% highlight latex %} {% include_remote
+  https://raw.githubusercontent.com/rdnajac/rdnajac.github.io/main/resume/rdnajac-resume.tex
+  %} {% endhighlight %}
+</div>
+{% endraw %}
