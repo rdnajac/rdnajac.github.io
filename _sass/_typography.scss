@@ -1,0 +1,18 @@
+h1,
+h2,
+h3 {
+  font-size: 24px;
+  color: $header-color;
+}
+
+a {
+  color: $link-color;
+  text-decoration: underline;
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+  }
+  &:active {
+    color: $link-color;
+  }
+}

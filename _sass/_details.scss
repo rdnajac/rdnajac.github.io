@@ -1,0 +1,25 @@
+details {
+  border-radius: 4px;
+  padding: 0.5em;
+  margin-bottom: 1em;
+
+  > summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: "👉";
+      margin-right: 0.5em;
+    }
+  }
+
+  &[open] > summary::before {
+    content: "👇";
+  }
+}

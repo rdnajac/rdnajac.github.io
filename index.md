@@ -14,4 +14,3 @@ I like figuring out how things work and sharing what I learn with others,
 so I'm also writing a [how-to guide](https://palomerolab.github.io/how-to/)
 for running bioinformatics tools and pipelines in high performance computing
 environments with a focus on reproducibility and scalability.
-

@@ -1,0 +1,73 @@
+.resume-container {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px; // Add some space at the bottom
+}
+
+#pdf-container,
+#source-container {
+  width: 100%;
+}
+
+#pdf-container {
+  position: relative;
+  padding-bottom: 141.4%; // Aspect ratio for A4 (297mm / 210mm)
+  height: 0;
+  overflow: hidden;
+
+  object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; // Remove any border that might cause scrollbars
+  }
+}
+
+#source-container {
+  height: 80vh; // Adjust this value as needed
+  overflow-y: auto;
+  background-color: darken($bg-color, 5%);
+  border: 1px solid lighten($bg-color, 10%);
+  border-radius: 4px;
+
+  pre {
+    margin: 0;
+    padding: 10px;
+  }
+
+  code {
+    font-family: $font-family;
+    font-size: 8pt !important; // Force font size
+    line-height: 1.5; // Adjust line height for readability
+    color: $text-color;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+}
+
+#toggle-source {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  background-color: $link-bg;
+  color: $icon-color;
+  text-decoration: none;
+  border: 1px solid $link-border;
+  border-radius: 4px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($link-bg, 10%);
+    color: lighten($link-color, 15%);
+  }
+}
+
+// Add this to ensure the details content doesn't overflow
+details {
+  overflow: hidden;
+}

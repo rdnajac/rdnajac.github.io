@@ -11,6 +11,10 @@
     />
     <link
       rel="stylesheet"
+      href="{{ '/assets/css/syntax.css' | relative_url }}"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
     <link
@@ -25,10 +29,7 @@
     <hr />
 
     <div class="wrapper">
-      <section>
-        {{ content }} {% if page.url == '/' %} {% include resume.html %} {%
-        endif %}
-      </section>
+      <section>{{ content }} {% include resume.html %}</section>
 
       <hr />
       <footer><p>{{ site.copyright }}</p></footer>
@@ -36,4 +37,3 @@
     <script src="{{ '/assets/js/smooth-navigation.js' | relative_url }}"></script>
   </body>
 </html>
-<!-- vim: ft=html -->

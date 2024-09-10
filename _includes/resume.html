@@ -1,15 +1,11 @@
 <details>
   <summary><h2>My resume</h2></summary>
-  <div style="width: 100%; height: 500px">
-    <p>
-      <a href="#" id="toggle-source">View source</a>
-    </p>
-    <div id="pdf-container" style="width: 100%; height: 100%">
+  <a href="#" id="toggle-source">View source</a>
+  <div class="resume-container">
+    <div id="pdf-container">
       <object
         data="{{ '/assets/rdnajac-resume.pdf' | relative_url }}"
         type="application/pdf"
-        width="100%"
-        height="100%"
       >
         <p>
           It appears you don't have a PDF plugin for this browser. You can
@@ -19,50 +15,10 @@
         </p>
       </object>
     </div>
-    <div
-      id="source-container"
-      style="width: 100%; height: 100%; display: none; overflow: auto"
-    >
+    <div id="source-container" style="display: none">
       <pre><code class="language-latex"></code></pre>
     </div>
   </div>
 </details>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.getElementById("toggle-source");
-    const pdfContainer = document.getElementById("pdf-container");
-    const sourceContainer = document.getElementById("source-container");
-    const sourceCode = sourceContainer.querySelector("code");
-    let sourceLoaded = false;
-
-    toggleButton.addEventListener("click", function (e) {
-      e.preventDefault();
-      if (pdfContainer.style.display !== "none") {
-        pdfContainer.style.display = "none";
-        sourceContainer.style.display = "block";
-        toggleButton.textContent = "View PDF";
-
-        if (!sourceLoaded) {
-          sourceCode.textContent = "Loading...";
-          fetch(
-            "https://raw.githubusercontent.com/rdnajac/rdnajac.github.io/main/resume/rdnajac-resume.tex",
-          )
-            .then((response) => response.text())
-            .then((data) => {
-              sourceCode.textContent = data;
-              sourceLoaded = true;
-            })
-            .catch((error) => {
-              console.error("Error:", error);
-              sourceCode.textContent = "Failed to load source.";
-            });
-        }
-      } else {
-        pdfContainer.style.display = "block";
-        sourceContainer.style.display = "none";
-        toggleButton.textContent = "View source";
-      }
-    });
-  });
-</script>
+<script src="{{ '/assets/js/resume-toggle.js' | relative_url }}"></script>
