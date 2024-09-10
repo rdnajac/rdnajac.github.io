@@ -10,6 +10,7 @@
 \usepackage{titlesec}                   % modify sections
 \titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}[\titlerule]
 \setlength{\parindent}{0pt}		% no paragraph indentation
+\setlist[itemize]{noitemsep, topsep=2pt, partopsep=0pt, parsep=0pt}
 
 \begin{document}
 \raggedright				% left-align text (default is full-justified)
@@ -17,9 +18,7 @@
 %==============================================================================
 
 \begin{center}
-  {\LARGE 
-    \textbf{Ryan Najac}
-  }\\
+  {\LARGE \textbf{Ryan Najac} }\\
   {\large
     \vspace{0.1cm}New York, NY\\ \vspace{0.1cm}
     \href{mailto:ryan.najac@columbia.edu}{\faEnvelopeSquare\: ryan.najac@columbia.edu} \medspace
@@ -30,18 +29,19 @@
   }
 \end{center}
 
-\vspace{-0.7cm}
+\vspace{-0.6cm}
 \section*{Experience}
 %==============================================================================
 \textbf{Columbia University – Institute for Cancer Genetics} \hfill New York, NY\\
 \textit{Senior Research Technician}, Palomero Lab \hfill September 2022 – Present
-\begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0pt]
+\begin{itemize}
+  \item Manage flexible, high-performance cloud-based computational infrastructure for bioinformatic analyses
   \item Build automated workflows for multi-omic sequencing data analysis, enabling batch processing of up to 1,000
-    samples simultaneously to accelerate the discovery of clinically-relevant biomarkers in leukemia and lymphoma
-  \item Design and implement flexible, high-performance cloud-based computational infrastructure 
-    for bioinformatic analyses, reducing computation time by 60\% compared to on-premises solutions
+        samples simultaneously to accelerate the discovery of clinically-relevant biomarkers in leukemia and lymphoma
+  \item Prepare bulk and single-cell sequencing libraries (RNA-seq, ChIP-seq, ATAC-seq), perform quality control assays,
+    and operate Illumina sequencers to generate high-quality data for downstream analyses.
   \item Develop a tiered data compression system using SAM-BAM-CRAM pipelines integrated with Amazon Web Services
-    to optimize storage efficiency and reduce long-term archival costs of over 200 TB of sequencing data
+        to optimize storage efficiency and reduce long-term archival costs of over 200 TB of sequencing data
 \end{itemize}
 \vspace{0.2cm}
 
@@ -50,7 +50,7 @@
 \begin{itemize}[noitemsep, topsep=2pt, partopsep=0pt, parsep=0pt]
   \item Implemented a low-latency parser for the Nasdaq TotalView-ITCH data feed using the C standard library
   \item Developed simulated data feeds and utilized profiling tools to validate parser functionality, optimize
-    performance, and resolve memory leaks, resulting in improved error handling and elimination of bottlenecks
+        performance, and resolve memory leaks, resulting in improved error handling and elimination of bottlenecks
   \item Collaborated with network engineers to develop a custom TCP/IP protocol that can recover corrupted data packets
 \end{itemize}
 \vspace{0.2cm}
@@ -68,7 +68,7 @@
 \textbf{Columbia University} \hfill New York, NY\\
 Bachelor of Arts, Computer Science \hfill May 2024
 
-\begin{itemize}[noitemsep, topsep=2pt, partopsep=0pt, parsep=0pt]
+\begin{itemize}
   \item Relevant Coursework: 
     \textit{Operating Systems}, \textit{Computer Networks}, \textit{Data Structures and Algorithms},\\
     \textit{Software Design}, \textit{Advanced Programming in the Linux Environment}, \textit{Probability and Statistics}
@@ -78,15 +78,14 @@ Bachelor of Arts, Computer Science \hfill May 2024
 \section*{Technical Skills}
 %==============================================================================
 \textbf{Programming Languages:}
-\begin{itemize}[noitemsep, topsep=2pt, partopsep=0pt, parsep=0pt]
+\begin{itemize}
   \item Proficient in C, C++, Python, VimL, and Linux shell script (sh, bash, POSIX)
   \item Some experience functional programming in Ocaml and object-oriented programming in Java
   \item Working knowledge of SQL database management and web development with HTML, CSS, JavaScript, and PHP
 \end{itemize}
 
-\vspace{0.1cm}
 \textbf{Frameworks and Software:}
-\begin{itemize}[noitemsep, topsep=2pt, partopsep=0pt, parsep=0pt]
+\begin{itemize}
   \item Cloud computing and data management using Amazon Web Services (AWS): EC2, S3, Batch, and Lambda
   \item Software testing and debugging with Unity, GoogleTest, pytest, GDB, Valgrind, and Wireshark
   \item Data analysis and visualization using R, pandas, ggplot2, and Matplotlib
@@ -95,9 +94,11 @@ Bachelor of Arts, Computer Science \hfill May 2024
 
 \section*{Publications}
 %==============================================================================
-\begin{itemize}[noitemsep, topsep=2pt, partopsep=0pt, parsep=0pt]
-  \item ``Integrative multi-omics networks identify PKC$\delta$ and DNA-PK as master kinases of glioblastoma subtypes and guide targeted cancer therapy.'' Migliozzi, S. et al. \textit{Nature Cancer}, 4, 181–202, 2023. \href{https://doi.org/10.1038/s43018-022-00510-x}{DOI}
-  \item ``Pathway-based classification of glioblastoma uncovers a mitochondrial subtype with therapeutic vulnerabilities.'' Garofano, L. et al. \textit{Nature Cancer}, 2, 141–156, 2021. \href{https://doi.org/10.1038/s43018-020-00159-4}{DOI}
+\begin{itemize}
+  \item ``Integrative multi-omics networks identify PKC$\delta$ and DNA-PK as master kinases of glioblastoma subtypes and guide targeted cancer therapy.''
+    Migliozzi, S. et al. \textit{Nature Cancer}, 4, 181–202, 2023. \href{https://doi.org/10.1038/s43018-022-00510-x}{DOI}
+  \item ``Pathway-based classification of glioblastoma uncovers a mitochondrial subtype with therapeutic vulnerabilities.''
+    Garofano, L. et al. \textit{Nature Cancer}, 2, 141–156, 2021. \href{https://doi.org/10.1038/s43018-020-00159-4}{DOI}
 \end{itemize}
 
 \end{document}

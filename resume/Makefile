@@ -17,7 +17,7 @@ $(DOC).pdf: $(DOC).tex
 	$(LATEXMK) $(FLAGS) $(DOC).tex
 
 # Install files to assets folder and Desktop
-install: $(DOC).pdf $(DOC).md
+install: $(DOC).pdf
 	cp -fv $(DOC).pdf ../assets/
 	cp -fv $(DOC).pdf ~/Desktop/
 
