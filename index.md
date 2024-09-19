@@ -14,3 +14,12 @@ I like figuring out how things work and sharing what I learn with others,
 so I'm also writing a [how-to guide](https://palomerolab.github.io/how-to/)
 for running bioinformatics tools and pipelines in high performance computing
 environments with a focus on reproducibility and scalability.
+
+<hr />
+
+## 📄 View/Download/Print [my resume](assets/rdnajac-resume.pdf)
+
+## 💻 Browse the [source code](https://raw.githubusercontent.com/rdnajac/rdnajac.github.io/refs/heads/main/resume/rdnajac-resume.tex)
+
+## 📫 Email me at [ryan.najac@columbia.edu](mailto:ryan.najac@columbia.edu)
+

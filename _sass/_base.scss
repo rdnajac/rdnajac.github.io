@@ -1,15 +1,33 @@
+html {
+  /* 62.5% of 16px user agent font size is 10px */
+  font-size: 62.5%;
+}
+
 body {
   background-color: $bg-color;
   font-family: $font-family;
   color: $text-color;
+  font-size: 1.6rem;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+h1, h2, h3 { color: $header-color; }
+h1 { font-size: 2.4rem; }
+h2 { font-size: 2.0rem; }
+h3 { font-size: 1.8rem; }
+
+a {
+  color: $link-color;
+  text-decoration: underline;
+  &:hover, &:focus { color: $link-hover-color; }
+  &:active         { color: $link-color; }
+}
+
 hr {
   border: 0;
-  background: #e5e5e5;
+  background: $button-border;
   height: 1px;
   margin: 0 0 20px;
 }
