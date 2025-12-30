@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="{{ site.lang | default: 'en-US' }}">
+<html lang="{{ .Site.Language.Lang | default "en-US" }}">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {% seo %}
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ .Site.Params.description }}" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NBQ6Y8NPN6"></script>
     <script>
@@ -14,14 +15,8 @@
     
       gtag('config', 'G-NBQ6Y8NPN6');
     </script>
-    <link
-      rel="stylesheet"
-      href="{{ '/assets/css/style.css' | relative_url }}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ '/assets/css/syntax.css' | relative_url }}"
-    />
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -29,19 +24,21 @@
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="{{ site.favicon | relative_url }}"
+      href="{{ .Site.Params.favicon | relURL }}"
     />
   </head>
 
   <body>
-    <header>{% include header.html %}</header>
+    <header>{{ partial "header.html" . }}</header>
 
     <div class="wrapper">
-      <section>{{ content }} </section>
+      <section>
+        {{ block "main" . }}{{ end }}
+      </section>
 
       <hr />
-      <footer><p>{{ site.copyright }}</p></footer>
+      <footer><p>{{ .Site.Params.copyright | safeHTML }}</p></footer>
     </div>
-    <script src="{{ '/assets/js/smooth-navigation.js' | relative_url }}"></script>
+    <script src="{{ "js/smooth-navigation.js" | relURL }}"></script>
   </body>
 </html>

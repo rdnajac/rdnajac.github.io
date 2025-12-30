@@ -1,0 +1,17 @@
+baseURL = 'https://rdnajac.tech/'
+languageCode = 'en-us'
+title = 'Ryan D. Najac'
+
+[params]
+  description = "Welcome to my personal website!"
+  profile = "rdnajac-profile.jpg"
+  favicon = "favicon.ico"
+  tagline = "Researcher and programmer at the <a href='https://www.palomerolab.org/'>Palomero Lab</a>"
+  copyright = "Copyright &copy; 2024 <a href='https://github.com/rdnajac/rdnajac.github.io'>rdnajac</a>"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"

@@ -3,3 +3,10 @@ node_modules
 Gemfile.lock
 _site
 .sass-cache
+
+# Hugo
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
+.hugo_build.lock
