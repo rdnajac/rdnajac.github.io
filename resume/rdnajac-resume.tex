@@ -1,4 +1,4 @@
-% preamble {{{
+% preamble [[
 \documentclass[11pt,a4paper]{article}   % set font size and paper size
 \usepackage[utf8]{inputenc}             % set input encoding to utf8 (same as vim)
 \usepackage[T1]{fontenc}                % enable boldface and single-char diacritics
@@ -13,11 +13,22 @@
 \setlength{\parindent}{0pt}             % no paragraph indentation
 \setlist[itemize]{noitemsep, topsep=2pt, partopsep=0pt, parsep=0pt}
 
+% Set bullets directory - defaults to 'original', can be overridden via \def\bulletsdir{...}
+\providecommand{\bulletsdir}{original}
+
+% Load job bullets from bullets/<dir>/<job>.tex with itemize wrapper
+\newcommand{\jobbullets}[1]{%
+  \begin{itemize}%
+    \input{bullets/\bulletsdir/#1.tex}%
+  \end{itemize}%
+}
+
 \begin{document}
 \raggedright                            % left-align text (default is full-justified)
 \thispagestyle{empty}                   % remove page number
-% ===================================================================== }}}
+% =========================================================================== ]]
 
+% header [[
 \begin{center}
   {\LARGE \textbf{Ryan Najac} }\\
   {\large
@@ -29,36 +40,22 @@
     \href{https://www.linkedin.com/in/ryan-najac/}{\faLinkedinSquare\:  \underline{\smash{ryan-najac}}}
   }
 \end{center}
-
+% =========================================================================== ]]
 \vspace{-0.6cm}
-\section*{Experience}
-%##
-%==============================================================================
+
+\section*{Experience} % ========================================================
+
 \textbf{Columbia University – Institute for Cancer Genetics} \hfill New York, NY\\
 \textit{Senior Research Technician}, Palomero Lab \hfill August 2023 – Present
-\begin{itemize}
-  \item Manage flexible, high-performance cloud-based computational infrastructure for bioinformatic analyses
-  \item Build automated workflows for multi-omic sequencing data analysis, enabling batch processing of up to 1,000
-    samples simultaneously to accelerate the discovery of clinically-relevant biomarkers
-  \item Prepare bulk and single-cell sequencing libraries (RNA-seq, ChIP-seq, ATAC-seq), perform quality control assays,
-    and operate Illumina sequencers to generate high-quality data for downstream analyses.
-  \item Develop a tiered data compression system integrated with Amazon Web Services
-    to optimize storage efficiency and reduce long-term archival costs of over 200 TB of sequencing data
-\end{itemize}
+\jobbullets{columbia}
 \vspace{0.2cm}
 
 \textbf{Hyannis Port Research (HPR)} \hfill Needham, MA\\
 \textit{Software Engineer Intern} \hfill May 2023 – August 2023
-\begin{itemize}[noitemsep, topsep=2pt, partopsep=0pt, parsep=0pt]
-  \item Implemented a low-latency parser for the Nasdaq TotalView-ITCH data feed using the C standard library
-  \item Developed simulated data feeds and utilized profiling tools to validate parser functionality, optimize
-    performance, and resolve memory leaks, resulting in improved bottlenecks and error handling
-  \item Collaborated with network engineers to develop a TCP/IP protocol that can recover corrupted data packets
-\end{itemize}
+\jobbullets{hpr}
 \vspace{0.2cm}
 
-\section*{Education}
-%==============================================================================
+\section*{Education} %==========================================================
 \textbf{Columbia University} \hfill New York, NY\\
 Bachelor of Arts, Computer Science \hfill May 2024
 
@@ -69,8 +66,7 @@ Bachelor of Arts, Computer Science \hfill May 2024
   \item Projects: C HTTP web server, Linux file system and scheduler implementations, C-like language compiler
 \end{itemize}
 
-\section*{Technical Skills}
-%==============================================================================
+\section*{Technical Skills} %===================================================
 \textbf{Programming Languages:}
 \begin{itemize}
   \item Proficient in C, C++, Python, R, Lua, VimL, and Linux shell script (sh, bash, POSIX)
@@ -86,8 +82,7 @@ Bachelor of Arts, Computer Science \hfill May 2024
   \item Technical documentation and scientific writing using Jupyter notebooks, Rmarkdown, and \LaTeX
 \end{itemize}
 
-\section*{Publications}
-%==============================================================================
+\section*{Publications} %=======================================================
 \begin{itemize}
   \item ``Integrative multi-omics networks identify PKC$\delta$ and DNA-PK as master kinases of glioblastoma subtypes and guide targeted cancer therapy.''
     Migliozzi, S. et al. \textit{Nature Cancer}, 4, 181–202, 2023. \href{https://doi.org/10.1038/s43018-022-00510-x}{DOI}
@@ -96,4 +91,4 @@ Bachelor of Arts, Computer Science \hfill May 2024
 \end{itemize}
 
 \end{document}
-% vim:foldmethod=marker
+% vim: fdm=marker: fmr=[[,]]: fdl=1

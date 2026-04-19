@@ -6,8 +6,11 @@ FLAGS = -pdf -silent
 
 all: $(DOC).pdf 
 
-$(DOC).pdf: $(DOC).tex
-	$(LATEXMK) $(FLAGS) $(DOC).tex
+BULLETSDIR = original
+BULLETS = $(wildcard bullets/$(BULLETSDIR)/*.tex)
+
+$(DOC).pdf: $(DOC).tex $(BULLETS)
+	$(LATEXMK) $(FLAGS) -g $(DOC).tex
 	cp $(DOC).pdf ~/Documents/job/
 
 install: $(DOC).pdf
