@@ -1,5 +1,5 @@
 ---
-layout: page
+title: "Ryan D. Najac"
 ---
 
 # 👋 Hello, world!
@@ -24,4 +24,3 @@ environments with a focus on reproducibility and scalability.
 ## 📫 Email me at [ryan.najac@columbia.edu](mailto:ryan.najac@columbia.edu)
 
 ## 💡 Check out what I'm [currently working on](https://rdnajac.tech/cpp-sandbox/)
-
