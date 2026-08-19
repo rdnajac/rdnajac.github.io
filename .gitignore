@@ -1,5 +1,5 @@
 .DS_Store
-node_modules
-Gemfile.lock
-_site
-.sass-cache
+/public/
+/resources/_gen/
+hugo_stats.json
+.hugo_build.lock

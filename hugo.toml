@@ -1,0 +1,32 @@
+baseURL = 'https://rdnajac.dev/'
+locale = 'en-US'
+title = 'Ryan D. Najac'
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  description = "Welcome to my personal website!"
+  profile = "rdnajac-profile.jpg"
+  favicon = "favicon.ico"
+  tagline = "Researcher and programmer at the <a href='https://www.palomerolab.org/'>Palomero Lab</a>"
+  copyrightSince = 2024
+
+  [[params.social]]
+    label = "Email"
+    url = "mailto:ryan.najac@columbia.edu"
+    icon = "fa-solid fa-envelope-square"
+  [[params.social]]
+    label = "Website"
+    url = "https://rdnajac.dev/"
+    icon = "fa-solid fa-globe"
+  [[params.social]]
+    label = "GitHub"
+    url = "https://github.com/rdnajac"
+    icon = "fa-brands fa-github-square"
+  [[params.social]]
+    label = "LinkedIn"
+    url = "https://www.linkedin.com/in/ryan-najac/"
+    icon = "fa-brands fa-linkedin"
+  [[params.social]]
+    label = "ORCID"
+    url = "https://orcid.org/0009-0000-6280-5646"
+    icon = "fa-brands fa-orcid"
