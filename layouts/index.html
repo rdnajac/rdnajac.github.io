@@ -22,6 +22,7 @@
       :root { --bg: #fff; --fg: #111; }
       :root[data-theme="dark"] { --bg: #111; --fg: #eee; }
       body { background: var(--bg); color: var(--fg); }
+      .page { max-width: 80ch; margin: 0 auto; padding: 0 1rem; }
       .profile-photo { width: 120px; border-radius: 4px; }
       .intro { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.25rem; }
       .intro h1 { margin: 0.25rem 0 0; }
@@ -63,14 +64,16 @@
       </div>
     </header>
 
-    <main>{{ .Content }}</main>
+    <div class="page">
+      <main>{{ .Content }}</main>
 
-    <hr />
-    <footer>
-      <p>
-        Copyright &copy; {{ .Site.Params.copyrightSince }}{{ if ne .Site.Params.copyrightSince now.Year }}-{{ now.Year }}{{ end }}
-        <a href="https://github.com/rdnajac/rdnajac.github.io">rdnajac</a>
-      </p>
-    </footer>
+      <hr />
+      <footer>
+        <p>
+          Copyright &copy; {{ .Site.Params.copyrightSince }}{{ if ne .Site.Params.copyrightSince now.Year }}-{{ now.Year }}{{ end }}
+          <a href="https://github.com/rdnajac/rdnajac.github.io">rdnajac</a>
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
